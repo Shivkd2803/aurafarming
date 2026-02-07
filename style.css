@@ -1,0 +1,514 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff6f91, #ff9a9e);
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Floating Card */
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(14px);
+    border-radius: 28px;
+    padding: 25px;
+    text-align: center;
+    color: white;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    animation: floatIn 1s ease forwards;
+    margin: 0 auto;
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+h1 {
+    font-size: 2.1rem;
+    margin-bottom: 12px;
+}
+
+.intro {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+    margin-bottom: 22px;
+    opacity: 0.95;
+}
+
+
+@media (max-width: 480px) {
+    .intro {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}
+
+
+
+/* Video */
+.video-box video {
+    width: 100%;
+    border-radius: 18px;
+    margin-bottom: 22px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Love Letter */
+.letter {
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 20px;
+    padding: 22px;
+    margin-bottom: 22px;
+}
+
+.letter h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+}
+
+.letter p {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    text-align: center;
+}
+
+
+/* Question */
+.question {
+    font-size: 1.5rem;
+    margin: 18px 0;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 14px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+#yesBtn {
+    background: linear-gradient(135deg, #ff2f6d, #ff6f91);
+    color: white;
+}
+
+#noBtn {
+    background: white;
+    color: #ff2f6d;
+    position: relative;
+}
+
+/* Final Message */
+#finalMessage {
+    margin-top: 22px;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+/* Background hearts */
+.background-hearts::before {
+    content: "💖 💕 💗 💓 💞 💘";
+    position: fixed;
+    bottom: -10%;
+    left: 10%;
+    font-size: 2rem;
+    opacity: 0.5;
+    animation: hearts 12s linear infinite;
+}
+
+@keyframes hearts {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-120vh);
+    }
+}
+
+/* Desktop enhancement */
+@media (min-width: 768px) {
+    .card {
+        max-width: 480px;
+        padding: 35px;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+}
+
+
+/* Proposal Mini Card */
+.proposal-card {
+    margin-top: 18px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    border-radius: 22px;
+    padding: 20px;
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    animation: popIn 0.8s ease forwards;
+}
+
+.proposal-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+h1.calligraphy {
+    font-family:
+        "Great Vibes",
+        "Allura",
+        "Dancing Script",
+        "Parisienne",
+        "Sacramento",
+        cursive;
+    font-size: 2.4rem;
+    letter-spacing: 0.5px;
+    color: #fff;
+    text-shadow: 1px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.name-heading {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Small handwritten "Hey" */
+.hey-text {
+    position: absolute;
+    top: -12px;
+    left: -20px;
+    font-family: "Allura", cursive;
+    font-size: 1.3rem;
+    opacity: 0.85;
+}
+
+/* Big dramatic name */
+.name-text {
+    font-family: "Great Vibes", cursive;
+    font-size: 3.4rem;
+    line-height: 1;
+    text-transform: none;
+    /* ensures capital A stays */
+    text-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+    .name-text {
+        font-size: 4.2rem;
+    }
+
+    .hey-text {
+        font-size: 1.6rem;
+        top: -16px;
+        left: -26px;
+    }
+}
+
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 100, 150, 0.3);
+    }
+
+    to {
+        text-shadow: 0 0 25px rgba(255, 0, 120, 0.6);
+    }
+}
+
+/* Memories Horizontal Scroll */
+.memories-wrapper {
+    margin: 20px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.memories-track {
+    display: flex;
+    gap: 16px;
+    animation: scrollMemories 18s linear infinite;
+}
+
+/* Same size as letter card */
+.memory-card {
+    min-width: 100%;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.memory-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* Smooth infinite loop */
+@keyframes scrollMemories {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+.memories-wrapper {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.memory-card {
+    scroll-snap-align: center;
+}
+
+/* Horizontal looping slider */
+.story-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 16px;
+    margin: 20px 0;
+    padding: 0 6%;
+}
+
+.story-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Same size cards */
+.story-card {
+    min-width: 88%;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 40px;
+    padding: 28px;
+    scroll-snap-align: center;
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Photos */
+.story-card img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* Letter styling */
+.letter-card h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.letter-card p {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.hye {
+    font-family: 'Allura', cursive;
+    /* or Great Vibes / Playfair Script etc */
+
+}
+
+.calligraphy-font {
+    font-family: 'Allura', cursive;
+    color: black;
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 480px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .card {
+        max-width: 100%;
+        padding: 18px;
+        border-radius: 22px;
+    }
+
+    .name-text {
+        font-size: 2.6rem;
+    }
+
+    .intro {
+        font-size: 0.95rem;
+    }
+
+    /* Slider */
+    .story-slider {
+        padding: 0;
+        gap: 12px;
+    }
+
+    .story-card {
+        min-width: 92%;
+        padding: 18px;
+        border-radius: 26px;
+    }
+
+    /* 🔑 IMAGE FIX */
+    .story-card img {
+        height: 450px;       /* WAS 450px ❌ */
+        border-radius: 12px;
+    }
+
+    /* Letter text */
+    .letter-card p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    /* Buttons */
+    button {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .proposal-card h2 {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* 💌 Valentine Question Font Upgrade */
+.proposal-card h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+/* Buttons text – soft handwritten */
+.proposal-card button {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 480px) {
+    .proposal-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .proposal-card button {
+        font-size: 1rem;
+    }
+}
+
+/* 💖 Final YES Message Styling */
+#finalMessage {
+    margin-top: 22px;
+    text-align: center;
+}
+
+/* Big romantic headline */
+#finalMessage .yes-title {
+    font-family: "Great Vibes", cursive;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    animation: glowYes 1.5s ease-in-out infinite alternate;
+}
+
+/* Soft handwritten message */
+#finalMessage .yes-text {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+
+@keyframes glowYes {
+    from {
+        text-shadow: 0 0 10px rgba(255, 120, 160, 0.4);
+    }
+    to {
+        text-shadow: 0 0 22px rgba(255, 60, 120, 0.8);
+    }
+}
+
+
+@media (max-width: 480px) {
+    #finalMessage .yes-title {
+        font-size: 1.9rem;
+    }
+
+    #finalMessage .yes-text {
+        font-size: 1.15rem;
+    }
+}
