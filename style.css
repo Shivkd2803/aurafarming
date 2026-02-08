@@ -512,3 +512,120 @@ h1.calligraphy {
         font-size: 1.15rem;
     }
 }
+
+.yes-gif {
+    display: none;
+    margin-top: 18px;
+    animation: popGif 0.6s ease-out forwards;
+}
+
+.yes-gif img {
+    width: 180px;
+    max-width: 80%;
+}
+
+@keyframes popGif {
+    0% {
+        transform: scale(0.4);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* 💖 YES POPUP OVERLAY */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+/* 💌 Popup Card */
+.popup-card {
+    background: linear-gradient(135deg, #ff6f91, #ff9a9e);
+    border-radius: 26px;
+    padding: 26px 22px;
+    max-width: 320px;
+    width: 90%;
+    text-align: center;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    animation: popupPop 0.6s ease forwards;
+}
+
+/* Title */
+.popup-card h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+/* Message */
+.popup-card p {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+/* Button */
+.popup-card button {
+    background: white;
+    color: #ff2f6d;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-family: "Dancing Script", cursive;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Pop Animation */
+@keyframes popupPop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.popup-gif {
+    width: 140px;
+    margin-bottom: 12px;
+    animation: gifPop 0.6s ease-out;
+    border-radius: 100px;
+}
+
+@keyframes gifPop {
+    0% {
+        transform: scale(0.4);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
