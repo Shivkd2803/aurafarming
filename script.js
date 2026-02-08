@@ -70,3 +70,32 @@ style.innerHTML = `
 }`;
 document.head.appendChild(style);
 
+const slider = document.getElementById("storySlider");
+const cards = slider.querySelectorAll(".story-card");
+let isJumping = false;
+
+slider.addEventListener("scroll", () => {
+    if (isJumping) return;
+
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+    // When reaching the cloned letter (end)
+    if (slider.scrollLeft >= maxScroll - 5) {
+        isJumping = true;
+
+        // Temporarily disable snap
+        slider.style.scrollSnapType = "none";
+
+        // Jump back to first letter
+        slider.scrollLeft = 0;
+
+        // Re-enable snap after jump
+        setTimeout(() => {
+            slider.style.scrollSnapType = "x mandatory";
+            isJumping = false;
+        }, 50);
+    }
+});
+
+
+
